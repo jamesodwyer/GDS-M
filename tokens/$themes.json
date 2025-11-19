@@ -127,7 +127,7 @@
   },
   {
     "id": "c1c0935a35afc03be96914f9eaf7b7d678dda108",
-    "name": "GDS-M - Color",
+    "name": "GDSM - Color",
     "selectedTokenSets": {
       "brand/color": "enabled"
     },

@@ -706,7 +706,7 @@
     "focus": {
       "border": {
         "$type": "color",
-        "$value": "{color.accent.blue}"
+        "$value": "{color.brand.01}"
       }
     },
     "text": {
