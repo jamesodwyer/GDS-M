@@ -127,7 +127,7 @@
   },
   {
     "id": "c1c0935a35afc03be96914f9eaf7b7d678dda108",
-    "name": "GDSM - Color",
+    "name": "GDS-M - Color",
     "selectedTokenSets": {
       "brand/color": "enabled"
     },
@@ -917,13 +917,9 @@
       "segment.spacing.l.minHeight": "7ce416449dc2d48d4278bce45345cbf52786de55",
       "segment.spacing.inBetween": "06fe48f551d9930499cd28e85ddb20ab714d910e",
       "stack.spacing.form.desktop": "fbb91b225d4acea9e4587bf4a01041ad3141fd1c",
-      "layout.spacing.in-between-cards": "02306cf45e250320c72e09130b6be5d808dddda1",
-      "layout.spacing.in-between-interactive": "5265debb6b2b18e6f181c24e09e9a6f50de08afb",
-      "layout.spacing.content-to-button": "3c4954895e6228a64879b2f831645cc8ce03c680",
       "icon.size.large": "a95eb7bb9ce11a9e51fead1719fdbf3ef75da9b7",
       "icon.size.medium": "f9127a5d9f2c78549b86e9dd5250d526d69f8796",
       "icon.size.small": "14e7057306b5a59c1ba18d6a795ad7bbcc32e638",
-      "layout.spacing.form-stack": "a7dab32ed7f942890958e7509b46403578158a41",
       "color.brand.01": "beda266d42a513f674acb687719d70a101703a43",
       "color.brand.02": "db3a318a839fee1b5ef490c40e2e122364f60831",
       "color.interactive.ghost.text.default": "5952733c78f374b386059418d62137ae9bbb9022",
@@ -934,7 +930,11 @@
       "color.interactive.ghost.icon.pressed": "246106dc568860c4882eaeaa7dbf04b85bd1e4d8",
       "color.interactive.ghost.fill.default": "134caf5eaa06c80b8fb1dfd2e371e4e7577f902d",
       "color.interactive.ghost.fill.hover": "944a636e485e2601a8dbc8a88ef8929cf2cc4be5",
-      "color.interactive.ghost.fill.pressed": "d69bbc8b0d0e7214d599e327c04860bc0f866515"
+      "color.interactive.ghost.fill.pressed": "d69bbc8b0d0e7214d599e327c04860bc0f866515",
+      "layout.spacing.inBetweenCards": "02306cf45e250320c72e09130b6be5d808dddda1",
+      "layout.spacing.inBetweenInteractive": "5265debb6b2b18e6f181c24e09e9a6f50de08afb",
+      "layout.spacing.contentToButton": "3c4954895e6228a64879b2f831645cc8ce03c680",
+      "layout.spacing.formStack": "a7dab32ed7f942890958e7509b46403578158a41"
     },
     "$figmaCollectionId": "VariableCollectionId:58:26718",
     "$figmaModeId": "58:1",

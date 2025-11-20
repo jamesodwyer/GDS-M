@@ -21,22 +21,22 @@
   },
   "layout": {
     "spacing": {
-      "in-between-cards": {
+      "inBetweenCards": {
         "$type": "dimension",
         "$value": "{core.dimension.600}",
         "$description": "This is the spacing between card elements i.e. carousels, event cards"
       },
-      "in-between-interactive": {
+      "inBetweenInteractive": {
         "$type": "dimension",
         "$value": "{core.dimension.400}",
         "$description": "This is the spacing between 2 or more interactive elements i.e. button, chips"
       },
-      "content-to-button": {
+      "contentToButton": {
         "$type": "dimension",
         "$value": "{core.dimension.600}",
         "$description": "This is the spacing from the bottom of any content to a main CTA i.e. primary or secondary button"
       },
-      "form-stack": {
+      "formStack": {
         "$type": "dimension",
         "$value": "{core.dimension.800}",
         "$description": "This is the spacing between form elements i.e. input fields and check box groups"
