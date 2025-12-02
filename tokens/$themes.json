@@ -934,7 +934,7 @@
       "layout.spacing.inBetweenCards": "02306cf45e250320c72e09130b6be5d808dddda1",
       "layout.spacing.inBetweenInteractive": "5265debb6b2b18e6f181c24e09e9a6f50de08afb",
       "layout.spacing.contentToButton": "3c4954895e6228a64879b2f831645cc8ce03c680",
-      "layout.spacing.formStack": "a7dab32ed7f942890958e7509b46403578158a41"
+      "layout.spacing.formGap": "a7dab32ed7f942890958e7509b46403578158a41"
     },
     "$figmaCollectionId": "VariableCollectionId:58:26718",
     "$figmaModeId": "58:1",

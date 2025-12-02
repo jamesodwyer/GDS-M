@@ -36,9 +36,9 @@
         "$value": "{core.dimension.600}",
         "$description": "This is the spacing from the bottom of any content to a main CTA i.e. primary or secondary button"
       },
-      "formStack": {
+      "formGap": {
         "$type": "dimension",
-        "$value": "{core.dimension.800}",
+        "$value": "{core.dimension.600}",
         "$description": "This is the spacing between form elements i.e. input fields and check box groups"
       }
     }
