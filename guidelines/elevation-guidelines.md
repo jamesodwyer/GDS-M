@@ -20,25 +20,20 @@
 
 - **Accessibility note:** Elevation helps users understand the structure and layering of the interface, which supports cognitive accessibility. Ensure sufficient contrast between elevated elements and their backgrounds. For users with motion sensitivity, consider reducing or removing elevation animations where possible.
 
-## 2. Design Tokens
+## 2. Elevation System
 
 Our elevation system includes three key visual elements: shadows (in this release v2.0), surface fill colour, and potentially border colour. These elements will be defined for both light and dark modes to ensure clarity and consistency across themes. Additionally, we will support inverse elevation styles in light mode for components that appear on dark backgrounds, maintaining accessibility and visual contrast.
 
 Elevation can be represented through subtle shadows, tonal variations, or borders, depending on the context. This flexibility allows for a cohesive look and feel while supporting accessibility and clarity.
 
-- **Token architecture reminder:**
-  - Core → Brand → Semantic → Component
+### Elevation Levels
 
-- **Token table:**
-
-| Token layer | Example token name | Example value / mapping | Role / notes |
-|------------|--------------------|--------------------------|-------------|
-| Semantic   | `{semantic.elevation.level-1}` | `X0, Y1, Blur 4, Spread 0, Cosmos #121212 - 15%` | Basic cards, alerts |
-| Semantic   | `{semantic.elevation.level-2}` | `X0, Y2, Blur 8, Spread 0, Cosmos #121212 - 15%` | Sticky elements, headers, footers |
-| Semantic   | `{semantic.elevation.level-3}` | `X0, Y3, Blur 12, Spread 0, Cosmos #121212 - 18%` | Multiple sticky elements, panels floating over content |
-| Semantic   | `{semantic.elevation.level-4}` | `X0, Y8, Blur 20, Spread 0, Cosmos #121212 - 35%` | Modals, sidepanels (always used with overlay background) |
-
-**White-labelling note:** Elevation tokens use semantic naming that remains consistent across brands. The shadow colour (Cosmos #121212) and opacity values can be adjusted per brand through the token system without breaking the semantic meaning or component functionality. This allows different brands to maintain their visual identity while preserving the elevation hierarchy structure.
+| Level | Shadow specification | Role / notes |
+|-------|---------------------|--------------|
+| Level 1 | X0, Y1, Blur 4, Spread 0, Cosmos #121212 - 15% | Basic cards, alerts |
+| Level 2 | X0, Y2, Blur 8, Spread 0, Cosmos #121212 - 15% | Sticky elements, headers, footers |
+| Level 3 | X0, Y3, Blur 12, Spread 0, Cosmos #121212 - 18% | Multiple sticky elements, panels floating over content |
+| Level 4 | X0, Y8, Blur 20, Spread 0, Cosmos #121212 - 35% | Modals, sidepanels (always used with overlay background) |
 
 ## 3. Usage Guidelines
 
@@ -126,7 +121,8 @@ Elevation levels remain consistent across all breakpoints. The visual appearance
 
 | Version | Date       | Change                              | Impact |
 |---------|------------|--------------------------------------|--------|
-| 2.0     | 2025-06-20 | Elevation 2.0 guidelines extracted from Figma. Replaces legacy "Shadows" system. | ✅ Current version |
+| 2.1     | 2025-01-15 | Removed design tokens section. Design tokens will be added in a later update. | ✅ Current version |
+| 2.0     | 2025-06-20 | Elevation 2.0 guidelines extracted from Figma. Replaces legacy "Shadows" system. | ⚠️ Deprecated |
 | 1.0     | Legacy     | Initial shadows system (deprecated) | ⚠️ Deprecated |
 
 **Note:** Legacy/deprecated version: Shadows. The current elevation system (v2.0) replaces the previous shadows-based approach with a more comprehensive elevation system that includes shadows, surface fill colour, and potentially border colour.

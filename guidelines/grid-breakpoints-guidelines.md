@@ -71,20 +71,14 @@
 
 ### 5. Accessibility (A11y)
 
-- TODO: Add explicit accessibility contrast rules for Grid tokens.
+- TODO: Add explicit accessibility contrast rules for Grid system.
 - TODO: Add focus, outline, and layout accessibility guidance.
 
-### 6. Update Me
-
-**⚠️ Token Values:** The token names and values in section 2 (Design Tokens) are placeholders extracted from the Figma file. These should be replaced with the actual token names and values from your design token system before finalising this document. Please verify:
-- Core token naming convention matches your system
-- Semantic token names are correct (e.g., `{semantic.breakpoint.sm}` format)
-- Token values (breakpoint values) are accurate
-- All token mappings are properly documented
 
 ### 7. Versioning & Change Log
 
 | Version | Date       | Change                              | Impact |
 |---------|------------|--------------------------------------|--------|
-| 1.0     | 01/01/2025 | Initial guidelines extracted to MD. | ✅ Baseline |
+| 1.1     | 2025-01-15 | Removed design tokens section. Design tokens will be added in a later update. | ✅ Current version |
+| 1.0     | 01/01/2025 | Initial guidelines extracted to MD. | ⚠️ Deprecated |
 

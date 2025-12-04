@@ -21,35 +21,30 @@
 
 - **Accessibility note:** Proper spacing ensures touch targets meet minimum size requirements (48px minimum). Maintain at least 8px space between touch targets to prevent accidental interactions. The 4px baseline grid supports consistent alignment and structure, which aids users with visual impairments in understanding page layout.
 
-## 2. Design Tokens
+## 2. Spacing Scale
 
 Our spacing system is built upon a 4px baseline grid. The structure of our pages is created through a percentage-based grid system that determines the position of components and how they expand. The grid takes the form of 12-columns on desktop and 8-columns for mobile.
 
-- **Token architecture reminder:**
-  - Core → Brand → Semantic → Component
+### Spacing Values
 
-- **Token table:**
-
-| Token layer | Example token name | Pixel size | Role / notes |
-|------------|--------------------|------------|--------------|
-| Semantic   | `{semantic.spacing.lounge}` | 4px | Smallest spacing unit, base of the system |
-| Semantic   | `{semantic.spacing.club}` | 8px | Tight spacing for closely related elements |
-| Semantic   | `{semantic.spacing.hall}` | 12px | Standard spacing for component groups |
-| Semantic   | `{semantic.spacing.auditorium}` | 16px | Comfortable spacing for sections |
-| Semantic   | `{semantic.spacing.theatre}` | 20px | Medium spacing for distinct sections |
-| Semantic   | `{semantic.spacing.amphitheatre}` | 24px | Larger spacing for major sections |
-| Semantic   | `{semantic.spacing.arena}` | 32px | Significant spacing for page sections |
-| Semantic   | `{semantic.spacing.stadium}` | 48px | Large spacing for major page divisions |
-| Semantic   | `{semantic.spacing.dome}` | 64px | Extra large spacing for hero sections |
-| Semantic   | `{semantic.spacing.field}` | 88px | Maximum spacing for major page breaks |
-
-**White-labelling note:** Spacing tokens use semantic naming (venue names) that remain consistent across brands. The pixel values are fixed and should not be modified per brand, as they form the foundation of the 4px baseline grid system. This ensures consistent spacing hierarchy and alignment across all brand implementations.
+| Name | Pixel size | Role / notes |
+|------|------------|--------------|
+| Lounge | 4px | Smallest spacing unit, base of the system |
+| Club | 8px | Tight spacing for closely related elements |
+| Hall | 12px | Standard spacing for component groups |
+| Auditorium | 16px | Comfortable spacing for sections |
+| Theatre | 20px | Medium spacing for distinct sections |
+| Amphitheatre | 24px | Larger spacing for major sections |
+| Arena | 32px | Significant spacing for page sections |
+| Stadium | 48px | Large spacing for major page divisions |
+| Dome | 64px | Extra large spacing for hero sections |
+| Field | 88px | Maximum spacing for major page breaks |
 
 ## 3. Usage Guidelines
 
 ### Horizontal Spacing
 
-The spacers we use determine both horizontal space as well as vertical space. Spacing tokens can be applied in any direction to create consistent spacing between elements.
+The spacers we use determine both horizontal space as well as vertical space. Spacing values can be applied in any direction to create consistent spacing between elements.
 
 ### Vertical Spacing
 
@@ -62,10 +57,10 @@ Use spacers to create and define negative space. They can also be used inside co
 ### ✅ Do:
 
 - Use the 4px baseline grid for all spacing decisions
-- Stack spacing tokens to create larger spaces (e.g., 4px + 4px = 8px)
+- Stack spacing values to create larger spaces (e.g., 4px + 4px = 8px)
 - Use spacers to define both space between components and negative space within components
 - Align all elements to the 4px baseline grid
-- Use appropriate spacing tokens for the hierarchy level needed
+- Use appropriate spacing values for the hierarchy level needed
 - Maintain consistent spacing across similar component types
 - Use spacers inside components to create consistent internal structure
 
@@ -132,8 +127,9 @@ Spacing values remain consistent across all breakpoints. The 4px baseline grid a
 
 | Version | Date       | Change                              | Impact |
 |---------|------------|--------------------------------------|--------|
-| 2.0     | 2025-01-15 | Spacing 2.0 guidelines. Updated version number. | ✅ Current version |
-| 1.0     | Legacy     | Initial spacing guidelines extracted from Figma. 4px baseline grid system with venue-named spacing tokens. | ⚠️ Deprecated |
+| 2.1     | 2025-01-15 | Removed design tokens section. Design tokens will be added in a later update. | ✅ Current version |
+| 2.0     | 2025-01-15 | Spacing 2.0 guidelines. Updated version number. | ⚠️ Deprecated |
+| 1.0     | Legacy     | Initial spacing guidelines extracted from Figma. 4px baseline grid system with venue-named spacing values. | ⚠️ Deprecated |
 
 ---
 

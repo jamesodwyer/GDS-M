@@ -21,43 +21,9 @@
 
 - **Accessibility note:** Accessibility is crucial to our digital experience. Using the Web Content Accessibility Guidelines (WCAG), which explain how to make web content more accessible to all users, the use of our digital colours aim to be 'AA' compliant on contrast at all times. Always pair colour with other cues like text, icons, or borders. Colour alone is not enough for users who rely on high-contrast or assistive technologies.
 
-### 2. Design Tokens
+### 2. Colour System
 
-- **Token architecture reminder:**
-  - Core → Brand → Semantic → Component
-
-- **Token table:**
-
-| Token layer | Example token name | Example value / mapping | Role / notes |
-|------------|--------------------|--------------------------|-------------|
-| Core       | `colour.neptune` | `#024DDF` | Primary brand colour |
-| Core       | `colour.cosmos` | `#121212` | Secondary dark colour |
-| Core       | `colour.granite` | `#646464` | Secondary medium grey |
-| Core       | `colour.spotlight` | `#FFFFFF` | Secondary white |
-| Core       | `colour.earth` | `#048851` | Tertiary green |
-| Core       | `colour.mars` | `#EB0000` | Tertiary red (error) |
-| Core       | `colour.callisto` | `#A733FF` | Tertiary purple |
-| Core       | `colour.jupiter` | `#FFB932` | Tertiary yellow/orange |
-| Core       | `colour.ganymede` | `#21FFF2` | Tertiary cyan |
-| Core       | `colour.titan` | `#FBFF2C` | Tertiary yellow |
-| Core       | `colour.neptune-bright` | `#3074FE` | Dark mode variant |
-| Core       | `colour.mars-bright` | `#FF3838` | Dark mode variant |
-| Core       | `colour.callisto-bright` | `#BD66FF` | Dark mode variant |
-| Core       | `colour.slate` | `#949494` | Structural grey |
-| Core       | `colour.moonrock` | `#BFBFBF` | Structural grey |
-| Core       | `colour.ammonite` | `#D6D6D6` | Structural grey |
-| Core       | `colour.diatomite` | `#EBEBEB` | Structural grey |
-| Core       | `colour.lunar` | `#F6F6F6` | Structural grey |
-| Semantic   | `colour.primary` | ↦ `colour.neptune` | Primary actions, CTAs |
-| Semantic   | `colour.text-primary` | ↦ `colour.cosmos` | Primary text |
-| Semantic   | `colour.text-secondary` | ↦ `colour.granite` | Secondary text |
-| Semantic   | `colour.background-default` | ↦ `colour.spotlight` | Default background |
-| Semantic   | `colour.error` | ↦ `colour.mars` | Error states |
-| Semantic   | `colour.success` | ↦ `colour.earth` | Success states |
-| Semantic   | `colour.border-default` | ↦ `colour.slate` | Default borders |
-| Component  | TODO | ↦ Semantic token | Applied in UI |
-
-**White-labelling note:** Colour tokens support white-labelling by allowing brand-specific colour adjustments while maintaining consistent semantic meaning. Primary, secondary, and tertiary colour mappings can be adjusted per brand while maintaining the overall colour system structure and accessibility requirements.
+Our colour system is organised into primary, secondary, tertiary, dark mode, and structural colour categories. Each colour serves specific purposes within the design system and maintains consistent usage across all Ticketmaster products.
 
 ### 3. Usage Guidelines
 
@@ -68,7 +34,7 @@
   - Use dark mode colours only on dark backgrounds to maintain AA contrast compliance
   - Use overlays (e.g., Cosmos 70% alpha) for modal backgrounds and image overlays
   - Use structural colours for UI components, borders, fills, backgrounds and structure
-  - Always use colour tokens — never custom colours — to ensure visual consistency across light and dark themes
+  - Always use system colours — never custom colours — to ensure visual consistency across light and dark themes
   - Follow the colour hierarchy to help users process content
   - Refer to the accessibility colour sheet for approved colour combinations
   - Use colour in combination with other cues (text, icons, borders) for accessibility
@@ -226,7 +192,7 @@ Having a good colour hierarchy in place makes for an overall better experience a
 
 ### 7. Responsive Behaviour
 
-Colour values remain consistent across breakpoints. However, colour contrast and visibility should be verified at all breakpoints to ensure accessibility compliance. Dark mode colours automatically adapt through tokens to maintain proper contrast ratios.
+Colour values remain consistent across breakpoints. However, colour contrast and visibility should be verified at all breakpoints to ensure accessibility compliance. Dark mode colours automatically adapt to maintain proper contrast ratios.
 
 ### 8. Accessibility (A11y)
 
@@ -262,19 +228,11 @@ As we enhance our digital experiences, dark and light modes will be an additiona
 
 **Note:** Dark mode colours are inverse tones that allow that colour to be used on a dark background and maintain AA level colour contrast. They should not be used in other placement or as additional colours.
 
-### 10. Update Me
-
-**⚠️ Token Values:** The token names and values in section 2 (Design Tokens) are placeholders extracted from the Figma file. These should be replaced with the actual token names and values from your design token system before finalising this document. Please verify:
-- Core token naming convention matches your system (e.g., `colour.neptune` format)
-- Semantic token names are correct (e.g., `colour.primary`, `colour.text-primary`)
-- Token values (hex codes, RGB, HSL) are accurate
-- All token mappings are properly documented
-- Dark mode token mappings are correctly defined
-- Overlay token values (alpha/opacity) are properly specified
 
 ### 11. Versioning & Change Log
 
 | Version | Date       | Change                              | Impact |
 |---------|------------|--------------------------------------|--------|
-| 1.0     | 01/01/2025 | Initial guidelines extracted to MD. | ✅ Baseline |
+| 1.1     | 2025-01-15 | Removed design tokens section. Design tokens will be added in a later update. | ✅ Current version |
+| 1.0     | 01/01/2025 | Initial guidelines extracted to MD. | ⚠️ Deprecated |
 

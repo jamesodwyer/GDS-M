@@ -18,25 +18,9 @@
 
 - **Accessibility note:** Always check the color text contrast when creating design layouts. Only use color combinations that pass AA accessibility standards. Minimum readable text sizes should be maintained, and line height and spacing guidance should be followed to ensure readability.
 
-### 2. Design Tokens
+### 2. Typography System
 
-- **Token architecture reminder:**
-  - Core → Brand → Semantic → Component
-
-- **Token table:**
-
-| Token layer | Example token name | Example value / mapping | Role / notes |
-|------------|--------------------|--------------------------|-------------|
-| Core       | `$font-family-averta` | `"Averta"` | Base typeface |
-| Core       | `$font-weight-regular` | `400` | Base font weight |
-| Core       | `$font-weight-semibold` | `600` | Semibold font weight |
-| Core       | `$font-weight-bold` | `700` | Bold font weight |
-| Brand      | TODO | ↦ Core token | Brand mapping |
-| Semantic   | `{semantic.typography.desktop.mauna}` | `54px Bold, 5% tracking, 54px line height` | Desktop Mauna style |
-| Semantic   | `{semantic.typography.mobile.everest}` | `32px Bold, 5% tracking, 32px line height` | Mobile Everest style |
-| Component  | TODO | ↦ Semantic token | Applied in UI |
-
-**White-labelling note:** Typography tokens support white-labelling by allowing brand-specific font family adjustments while maintaining consistent typography scale and hierarchy across brands.
+Our typography system is built around the Averta typeface with three font weights (Regular, Semi-Bold, and Bold) and a comprehensive scale of styles for both desktop and mobile contexts. The system maintains consistent hierarchy and readability across all Ticketmaster products.
 
 ### 3. Core Palette
 
@@ -128,13 +112,13 @@ Within our typography guidance, we have a standalone style applied to the header
 ### 7. Usage Guidelines
 
 - **✅ Do:**
-  - Use typography tokens throughout components and layouts
+  - Use typography styles throughout components and layouts
   - Match typography choices to content hierarchy and layout scale
   - Stick to the predefined scale — if a new size is needed, discuss it with the system team
   - Use uppercase for headlines and titles (restrict to a few words)
   - Use title case for secondary headlines
   - Use sentence case for body copy
-  - Apply typography using tokens — never fixed values — to ensure consistency, responsiveness, and adaptability across themes or brands
+  - Apply typography using system styles — never fixed values — to ensure consistency, responsiveness, and adaptability across themes or brands
   - Always check color text contrast to ensure AA accessibility compliance
   - Use the Title Accent style correctly when applying it to header titles
   - Keep line length between 50-75 characters on desktop (or no more than 600px width)
@@ -206,21 +190,15 @@ Line length is essential to user experience. It is the distance of a text from l
 - Color contrast requirements:
   - Text on background must meet WCAG AA standards (4.5:1 for normal text, 3:1 for large text)
   - Use contrast checker tools to verify combinations
-- Typography tokens specifically used for accessibility:
-  - Ensure all text uses semantic tokens that support accessibility
+- Typography styles specifically used for accessibility:
+  - Ensure all text uses system styles that support accessibility
   - Maintain consistent font sizes and weights for screen reader compatibility
 
-### 11. Update Me
-
-**⚠️ Token Values:** The token names and values in section 2 (Design Tokens) are placeholders extracted from the Figma file. These should be replaced with the actual token names and values from your design token system before finalising this document. Please verify:
-- Core token naming convention matches your system
-- Semantic token names are correct
-- Token values (font sizes, weights, line heights, tracking) are accurate
-- All token mappings are properly documented
 
 ### 12. Versioning & Change Log
 
 | Version | Date       | Change                              | Impact |
 |---------|------------|--------------------------------------|--------|
-| 1.0     | 01/01/2025 | Initial guidelines extracted to MD. | ✅ Baseline |
+| 1.1     | 2025-01-15 | Removed design tokens section. Design tokens will be added in a later update. | ✅ Current version |
+| 1.0     | 01/01/2025 | Initial guidelines extracted to MD. | ⚠️ Deprecated |
 

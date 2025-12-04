@@ -12,21 +12,9 @@
 
 - **Accessibility note:** TODO: Add WCAG contrast requirements and accessibility guidance from Figma file.
 
-### 2. Design Tokens
+### 2. Colour System
 
-- **Token architecture reminder:**
-  - Core → Brand → Semantic → Component
-
-- **Token table:**
-
-| Token layer | Example token name | Example value / mapping | Role / notes |
-|------------|--------------------|--------------------------|-------------|
-| Core       | TODO | TODO | Base raw value |
-| Brand      | TODO | ↦ Core token | Brand mapping |
-| Semantic   | TODO | ↦ Brand token | Contextual meaning |
-| Component  | TODO | ↦ Semantic token | Applied in UI |
-
-**White-labelling note:** TODO: Explain how colour tokens support white-labelling across brands.
+TODO: Add description of the colour system structure and organisation.
 
 ### 3. Usage Guidelines
 
@@ -50,7 +38,8 @@ TODO: Add responsive colour behaviour if applicable.
 
 | Version | Date       | Change                              | Impact |
 |---------|------------|--------------------------------------|--------|
-| 1.0     | 01/01/2025 | Initial guidelines extracted to MD. | ✅ Baseline |
+| 1.1     | 2025-01-15 | Removed design tokens sections. Design tokens will be added in a later update. | ✅ Current version |
+| 1.0     | 01/01/2025 | Initial guidelines extracted to MD. | ⚠️ Deprecated |
 
 ---
 
@@ -66,21 +55,9 @@ TODO: Add responsive colour behaviour if applicable.
 
 - **Accessibility note:** TODO: Add minimum readable text sizes, line height, and motion guidance from Figma file.
 
-### 2. Design Tokens
+### 2. Typography System
 
-- **Token architecture reminder:**
-  - Core → Brand → Semantic → Component
-
-- **Token table:**
-
-| Token layer | Example token name | Example value / mapping | Role / notes |
-|------------|--------------------|--------------------------|-------------|
-| Core       | TODO | TODO | Base raw value |
-| Brand      | TODO | ↦ Core token | Brand mapping |
-| Semantic   | TODO | ↦ Brand token | Contextual meaning |
-| Component  | TODO | ↦ Semantic token | Applied in UI |
-
-**White-labelling note:** TODO: Explain how typography tokens support white-labelling across brands.
+TODO: Add description of the typography system structure and organisation.
 
 ### 3. Usage Guidelines
 
@@ -109,7 +86,8 @@ TODO: Add responsive colour behaviour if applicable.
 
 | Version | Date       | Change                              | Impact |
 |---------|------------|--------------------------------------|--------|
-| 1.0     | 01/01/2025 | Initial guidelines extracted to MD. | ✅ Baseline |
+| 1.1     | 2025-01-15 | Removed design tokens sections. Design tokens will be added in a later update. | ✅ Current version |
+| 1.0     | 01/01/2025 | Initial guidelines extracted to MD. | ⚠️ Deprecated |
 
 ---
 
@@ -125,21 +103,9 @@ TODO: Add responsive colour behaviour if applicable.
 
 - **Accessibility note:** TODO: Add minimum spacing for touch targets and accessibility guidance from Figma file.
 
-### 2. Design Tokens
+### 2. Spacing System
 
-- **Token architecture reminder:**
-  - Core → Brand → Semantic → Component
-
-- **Token table:**
-
-| Token layer | Example token name | Example value / mapping | Role / notes |
-|------------|--------------------|--------------------------|-------------|
-| Core       | TODO | TODO | Base raw value |
-| Brand      | TODO | ↦ Core token | Brand mapping |
-| Semantic   | TODO | ↦ Brand token | Contextual meaning |
-| Component  | TODO | ↦ Semantic token | Applied in UI |
-
-**White-labelling note:** TODO: Explain how spacing tokens support white-labelling across brands.
+TODO: Add description of the spacing system structure and organisation.
 
 ### 3. Usage Guidelines
 
@@ -167,7 +133,8 @@ TODO: Add responsive colour behaviour if applicable.
 
 | Version | Date       | Change                              | Impact |
 |---------|------------|--------------------------------------|--------|
-| 1.0     | 01/01/2025 | Initial guidelines extracted to MD. | ✅ Baseline |
+| 1.1     | 2025-01-15 | Removed design tokens sections. Design tokens will be added in a later update. | ✅ Current version |
+| 1.0     | 01/01/2025 | Initial guidelines extracted to MD. | ⚠️ Deprecated |
 
 ---
 
@@ -188,23 +155,9 @@ TODO: Add responsive colour behaviour if applicable.
 
 - **Accessibility note:** TODO: Add accessibility guidance related to grid and layout from Figma file.
 
-### 2. Design Tokens
+### 2. Grid System
 
-- **Token architecture reminder:**
-  - Core → Brand → Semantic → Component
-
-- **Token table:**
-
-| Token layer | Example token name | Example value / mapping | Role / notes |
-|------------|--------------------|--------------------------|-------------|
-| Core       | TODO | TODO | Base raw value |
-| Brand      | TODO | ↦ Core token | Brand mapping |
-| Semantic   | `{semantic.breakpoint.sm}` | `"512px"` | Small breakpoint |
-| Semantic   | `{semantic.breakpoint.md}` | `"1024px"` | Medium breakpoint |
-| Semantic   | `{semantic.breakpoint.lg}` | `"1680px"` | Large breakpoint |
-| Component  | TODO | ↦ Semantic token | Applied in UI |
-
-**White-labelling note:** Grid tokens support white-labelling by allowing brand-specific margin and gutter adjustments while maintaining consistent column structures across breakpoints.
+The grid system provides a structured column-based layout designed for consistency and scalability across breakpoints. This grid ensures predictable layouts, making it easier to maintain visual hierarchy and alignment in both design and development.
 
 ### 3. Usage Guidelines
 
@@ -251,7 +204,8 @@ TODO: Add responsive colour behaviour if applicable.
 
 | Version | Date       | Change                              | Impact |
 |---------|------------|--------------------------------------|--------|
-| 1.0     | 01/01/2025 | Initial guidelines extracted to MD. | ✅ Baseline |
+| 1.1     | 2025-01-15 | Removed design tokens sections. Design tokens will be added in a later update. | ✅ Current version |
+| 1.0     | 01/01/2025 | Initial guidelines extracted to MD. | ⚠️ Deprecated |
 
 ---
 
@@ -267,21 +221,9 @@ TODO: Add responsive colour behaviour if applicable.
 
 - **Accessibility note:** TODO: Add accessibility guidance for elevation, shadows, and visual hierarchy from Figma file.
 
-### 2. Design Tokens
+### 2. Elevation System
 
-- **Token architecture reminder:**
-  - Core → Brand → Semantic → Component
-
-- **Token table:**
-
-| Token layer | Example token name | Example value / mapping | Role / notes |
-|------------|--------------------|--------------------------|-------------|
-| Core       | TODO | TODO | Base raw value |
-| Brand      | TODO | ↦ Core token | Brand mapping |
-| Semantic   | TODO | ↦ Brand token | Contextual meaning |
-| Component  | TODO | ↦ Semantic token | Applied in UI |
-
-**White-labelling note:** TODO: Explain how elevation tokens support white-labelling across brands.
+TODO: Add description of the elevation system structure and organisation.
 
 ### 3. Usage Guidelines
 
@@ -305,5 +247,6 @@ TODO: Add responsive elevation behaviour if applicable.
 
 | Version | Date       | Change                              | Impact |
 |---------|------------|--------------------------------------|--------|
-| 1.0     | 01/01/2025 | Initial guidelines extracted to MD. | ✅ Baseline |
+| 1.1     | 2025-01-15 | Removed design tokens sections. Design tokens will be added in a later update. | ✅ Current version |
+| 1.0     | 01/01/2025 | Initial guidelines extracted to MD. | ⚠️ Deprecated |
 
