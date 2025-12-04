@@ -132,7 +132,8 @@ Spacing values remain consistent across all breakpoints. The 4px baseline grid a
 
 | Version | Date       | Change                              | Impact |
 |---------|------------|--------------------------------------|--------|
-| 1.0     | 2025-01-15 | Initial spacing guidelines extracted from Figma. 4px baseline grid system with venue-named spacing tokens. | ✅ Current version |
+| 2.0     | 2025-01-15 | Spacing 2.0 guidelines. Updated version number. | ✅ Current version |
+| 1.0     | Legacy     | Initial spacing guidelines extracted from Figma. 4px baseline grid system with venue-named spacing tokens. | ⚠️ Deprecated |
 
 ---
 
