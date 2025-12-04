@@ -1,0 +1,46 @@
+{
+  "icon": {
+    "size": {
+      "small": {
+        "$type": "dimension",
+        "$value": "{core.dimension.300}"
+      },
+      "medium": {
+        "$type": "dimension",
+        "$value": "{core.dimension.400}"
+      },
+      "large": {
+        "$type": "dimension",
+        "$value": "{core.dimension.600}"
+      },
+      "xlarge": {
+        "$type": "dimension",
+        "$value": "{core.dimension.600}"
+      }
+    }
+  },
+  "layout": {
+    "spacing": {
+      "in-between-cards": {
+        "$type": "dimension",
+        "$value": "{core.dimension.600}px",
+        "$description": "This is the spacing between card elements i.e. carousels, event cards"
+      },
+      "in-between-interactive": {
+        "$type": "dimension",
+        "$value": "{core.dimension.600}px",
+        "$description": "This is the spacing between 2 or more interactive elements i.e. button, chips"
+      },
+      "content-to-button": {
+        "$type": "dimension",
+        "$value": "{core.dimension.600}px",
+        "$description": "This is the spacing from the bottom of any content to a main CTA i.e. primary or secondary button"
+      },
+      "form": {
+        "$type": "dimension",
+        "$value": "{core.dimension.600}px",
+        "$description": "This is the spacing between form elements i.e. input fields and check box groups"
+      }
+    }
+  }
+}
