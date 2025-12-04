@@ -12,7 +12,7 @@ This project extracts **Foundations guidelines** from a Figma file using Figma M
    - Screen sizes and breakpoints
    - Grid configurations (Small, Medium, Large, XLarge)
    - Usage guidelines
-   - Token examples
+   - System values and specifications
 4. **Created structured markdown** following the GDS Design Documentation Framework
 5. **Added TODO placeholders** for foundations not yet found in the Figma file (Colour, Typography, Spacing, Elevation)
 
@@ -36,7 +36,7 @@ The markdown must:
 - Be based on **existing text** in the Figma file (foundations pages/frames, notes, and guidelines).
 - Use **UK English**.
 - Follow our **GDS Design Documentation Framework** structure adapted for foundations.
-- Focus heavily on **design tokens, accessibility, and white-labelling**.
+- Focus heavily on **accessibility and white-labelling**.
 - Be safe to paste directly into Figma Make (no extra explanation or chatty text).
 
 ### What to read from Figma (via Figma MCP)
@@ -54,13 +54,13 @@ Using the available Figma MCP tools in this environment:
    - Within those frames, extract:
      - Text layers describing what the foundation is, when to use it, constraints, and examples.
      - Any notes about accessibility, WCAG, contrast, minimum sizes, responsive behaviour, etc.
-     - Any references to design tokens, variables, naming, and token layers (Core, Brand, Semantic, Component).
+     - Any references to system values, variables, and naming conventions.
      - Any "Do / Don't" lists, rules of thumb, or best practices.
      - Any versioning or change-log notes (even if they're informal).
 
 2. **Do not invent guidelines**. If something isn't present in the Figma content:
    - Leave a clear `TODO:` note in the markdown instead of guessing.
-   - Example: `TODO: Add explicit accessibility contrast rules for Elevation tokens.`
+   - Example: `TODO: Add explicit accessibility contrast rules for Elevation system.`
 
 3. Prefer **quoting or lightly editing** the existing Figma text for clarity and consistency.
 
@@ -77,24 +77,10 @@ For **each foundation** (Colour, Typography, Spacing, Grid & Breakpoints, Elevat
 - **When not to use:** (bullet list of anti-patterns)
 - **Accessibility note:** (short note, e.g. WCAG contrast, minimum size, motion, etc.)
 
-### 2. Design Tokens
-Explain how tokens are used for this foundation and how they support **white-labelling** across brands.
+### 2. System Structure
+Explain how the system is structured for this foundation and how it supports **white-labelling** across brands.
 
-- **Token architecture reminder:**
-  - Core → Brand → Semantic → Component
-
-- **Token table:**
-
-| Token layer | Example token name | Example value / mapping | Role / notes |
-|------------|--------------------|--------------------------|-------------|
-| Core       | `{core.color.blue.500}` | `#0050ff` | Base raw value |
-| Brand      | `{brand.primary.500}` | ↦ `{core.color.blue.500}` | Brand mapping |
-| Semantic   | `{semantic.button.primary.background}` | ↦ `{brand.primary.500}` | Contextual meaning |
-| Component  | `{component.button.primary.background.default}` | ↦ `{semantic.button.primary.background}` | Applied in UI |
-
-Update this table to match whatever is in the Figma file for that foundation (colours, type scale tokens, spacing tokens, grid tokens, elevation tokens, etc.).
-
-Add a short **"White-labelling note"** explaining how this foundation's tokens can change per brand without breaking semantics.
+Describe the system values, specifications, and organisation. Include any relevant tables or lists of values that define the foundation system.
 
 ### 3. Usage Guidelines
 
@@ -106,7 +92,7 @@ Summarise the **dos and don'ts** from the Figma file.
 - **❌ Don't:**
   - Turn key "misuse" points into bullets.
 
-When possible, reference semantic tokens instead of raw values (e.g. use `{semantic.text.body}` rather than a specific font size).
+When possible, reference system values instead of raw values (e.g. use system typography styles rather than specific font sizes).
 
 ### 4. Responsive Behaviour (if applicable)
 
@@ -120,7 +106,7 @@ Describe how this foundation behaves across breakpoints using a table where usef
 | Medium    | …                | …       |
 | Large     | …                | …       |
 
-If the Figma file includes references to specific breakpoint tokens, include them (e.g. `{semantic.breakpoint.sm}`) and how they drive behaviour.
+If the Figma file includes references to specific breakpoint values, include them and how they drive behaviour.
 
 ### 5. Accessibility (A11y)
 
@@ -128,7 +114,7 @@ Extract and consolidate all accessibility notes for that foundation:
 
 - Relevant **WCAG 2.1/2.2 AA** rules (e.g. colour contrast, minimum tap target, readable text sizes).
 - Any **focus, outline, elevation, motion, or typography** guidance tied to accessibility.
-- Any **tokens** specifically used for accessibility (e.g. `{semantic.focus.outline}`, high-contrast palettes).
+- Any **system values** specifically used for accessibility (e.g. focus outlines, high-contrast palettes).
 
 Use a simple checklist-style format where possible.
 
@@ -156,7 +142,7 @@ If there's no change history, create an initial version row and mark further ite
 
 - Within each section, use exactly the headings specified above.
 - Use **UK spelling** throughout (e.g. "colour", "organisation", "optimise").
-- Do not invent new token names; reuse whatever appears in the Figma file. If a mapping isn't clear, add a `TODO` instead of guessing.
+- Do not invent new system values; reuse whatever appears in the Figma file. If a value isn't clear, add a `TODO` instead of guessing.
 - Make sure tables are valid markdown and will render correctly in Figma Make.
 
 Now, using the Figma MCP tools, inspect the current Figma file, extract the foundations guidance following these rules, and produce the final `foundations-guidelines.md` content.
@@ -186,12 +172,10 @@ Now, using the Figma MCP tools, inspect the current Figma file, extract the foun
 
 ✅ **Completed:**
 - Grid & Breakpoints foundation (fully extracted and documented)
-
-⏳ **Pending:**
-- Colour foundation (TODO placeholders added)
-- Typography foundation (TODO placeholders added)
-- Spacing foundation (TODO placeholders added)
-- Elevation foundation (TODO placeholders added)
+- Colour foundation (fully extracted and documented)
+- Typography foundation (fully extracted and documented)
+- Spacing foundation (fully extracted and documented - v2.1)
+- Elevation foundation (fully extracted and documented - v2.1)
 
 ## Improvements for Future Prompts
 
@@ -222,20 +206,20 @@ Before starting, please confirm:
 
 **Why:** Understanding the file structure upfront would make extraction more efficient.
 
-### 3. **Add Token Extraction Examples**
-**Current issue:** The prompt mentions extracting tokens but doesn't specify how to identify them in Figma.
+### 3. **Add System Value Extraction Examples**
+**Current issue:** The prompt mentions extracting system values but doesn't specify how to identify them in Figma.
 
 **Improvement:**
 ```
-When extracting design tokens, look for:
+When extracting system values, look for:
 - Figma Variables (if using Variables feature)
-- Text layers with token notation (e.g., "{semantic.color.primary}")
-- Component properties that reference tokens
-- Style names that follow token naming conventions
-- Any documentation frames that list token values
+- Text layers with system value notation
+- Component properties that reference system values
+- Style names that follow naming conventions
+- Any documentation frames that list system values
 ```
 
-**Why:** This would help identify where token information might be stored in Figma.
+**Why:** This would help identify where system value information might be stored in Figma.
 
 ### 4. **Clarify "Do/Don't" Extraction**
 **Current issue:** The prompt asks for "Do / Don't" lists but doesn't specify how to identify them.
@@ -261,7 +245,7 @@ When extracting accessibility information, look for:
 - Text layers mentioning "WCAG", "AA", "AAA", "contrast", "accessibility"
 - Notes or annotations on components
 - Separate accessibility documentation frames
-- Token names containing "a11y", "accessibility", "focus", "outline"
+- System value names containing "a11y", "accessibility", "focus", "outline"
 - Any contrast ratio values or minimum size specifications
 ```
 
@@ -296,25 +280,25 @@ When extracting multiple foundations:
 
 **Why:** This would provide better visibility into what was found vs. what's missing.
 
-### 8. **Clarify Token Architecture**
-**Current issue:** The prompt assumes a specific token architecture (Core → Brand → Semantic → Component) but doesn't verify this matches the Figma file.
+### 8. **Clarify System Architecture**
+**Current issue:** The prompt doesn't specify how to document the system architecture.
 
 **Improvement:**
 ```
-Before documenting tokens, verify:
-- Does the Figma file use this exact token architecture?
-- Are there additional layers (e.g., Theme, Mode)?
+Before documenting the system, verify:
+- How is the system structured in the Figma file?
+- Are there multiple layers or categories?
 - What naming convention is used in the file?
-- Are tokens documented in variables, text layers, or separate documentation?
+- Are system values documented in variables, text layers, or separate documentation?
 ```
 
-**Why:** This would ensure the documentation matches the actual token system in use.
+**Why:** This would ensure the documentation matches the actual system structure in use.
 
 ## Recommended Next Steps
 
 1. **Locate missing foundations:** Search the Figma file for pages/frames containing Colour, Typography, Spacing, and Elevation content.
 
-2. **Extract token information:** Look for Figma Variables or token documentation within the file.
+2. **Extract system information:** Look for Figma Variables or system documentation within the file.
 
 3. **Complete TODO sections:** Once all foundations are located, fill in the TODO placeholders with actual content.
 
@@ -344,6 +328,6 @@ Before documenting tokens, verify:
 ---
 
 **Last Updated:** 2025-01-15  
-**Status:** Partial completion (Grid & Breakpoints complete, others pending)
+**Status:** All foundations complete. Design tokens removed from all guidelines - will be added in a later update.
 
 
