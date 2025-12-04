@@ -1,25 +1,30 @@
 # Elevation
 
-### 1. Overview
+## 1. Overview
 
-- **What it is:** Elevation helps users focus on the most important elements by introducing depth and hierarchy. It clarifies relationships between surfaces and ensures interactive elements are visually prioritised.
+- **What it is:** Elevation is the space in-between two elements on the z-axis of a view. It is a core design principle applied across all surfaces and components to establish a clear and consistent visual hierarchy. It represents the relative position of elements along the z-axis, helping users understand the structure and interactivity of the interface.
 
 - **When to use:**
-  - Creating visual hierarchy within content
-  - Establishing relationships between surfaces
-  - Prioritising interactive elements
-  - Creating overlays, modals, or drawers
-  - Implementing sticky elements like headers or footers
-  - Breaking visual rhythm with static surfaces
+  - To establish visual hierarchy between elements
+  - To indicate interactive or elevated components (cards, buttons, modals)
+  - To create depth and separation between layers of content
+  - To distinguish sticky elements (headers, footers) from scrollable content
+  - To indicate floating panels or overlays
+  - To provide visual feedback for interactive states
 
 - **When not to use:**
-  - Stacking too many elevation levels (creates clutter)
-  - Using elevation alone to suggest interactivity (must pair with other cues)
-  - Mixing static and inverse styling without a clear purpose
+  - On elements that should appear flat or integrated with the background
+  - When it creates unnecessary visual noise
+  - On decorative elements that don't require hierarchy indication
+  - When multiple elevation levels compete for attention unnecessarily
 
-- **Accessibility note:** Always pair elevation with other cues like colour and border. Shadows alone are not enough for users who rely on high-contrast or assistive technologies.
+- **Accessibility note:** Elevation helps users understand the structure and layering of the interface, which supports cognitive accessibility. Ensure sufficient contrast between elevated elements and their backgrounds. For users with motion sensitivity, consider reducing or removing elevation animations where possible.
 
-### 2. Design Tokens
+## 2. Design Tokens
+
+Our elevation system includes three key visual elements: shadows (in this release v2.0), surface fill colour, and potentially border colour. These elements will be defined for both light and dark modes to ensure clarity and consistency across themes. Additionally, we will support inverse elevation styles in light mode for components that appear on dark backgrounds, maintaining accessibility and visual contrast.
+
+Elevation can be represented through subtle shadows, tonal variations, or borders, depending on the context. This flexibility allows for a cohesive look and feel while supporting accessibility and clarity.
 
 - **Token architecture reminder:**
   - Core → Brand → Semantic → Component
@@ -28,80 +33,106 @@
 
 | Token layer | Example token name | Example value / mapping | Role / notes |
 |------------|--------------------|--------------------------|-------------|
-| Semantic   | `elevation.elevation-level-1` | Shadow effect | Level 1 elevation effect |
-| Semantic   | `elevation.elevation-level-2` | Shadow effect | Level 2 elevation effect |
-| Semantic   | `elevation.elevation-level-3` | Shadow effect | Level 3 elevation effect |
-| Semantic   | `elevation.elevation-level-4` | Shadow effect | Level 4 elevation effect |
-| Semantic   | `fill.elevation-level-1` | Surface fill | Level 1 surface fill |
-| Semantic   | `fill.elevation-level-2` | Surface fill | Level 2 surface fill |
-| Semantic   | `fill.elevation-level-3` | Surface fill | Level 3 surface fill |
-| Semantic   | `fill.elevation-level-4` | Surface fill | Level 4 surface fill |
-| Semantic   | `border.elevation-level-1` | Border/stroke | Level 1 border |
-| Semantic   | `border.elevation-level-2` | Border/stroke | Level 2 border |
-| Semantic   | `border.elevation-level-3` | Border/stroke | Level 3 border |
-| Semantic   | `border.elevation-level-4` | Border/stroke | Level 4 border |
-| Component  | TODO | ↦ Semantic token | Applied in UI |
+| Semantic   | `{semantic.elevation.level-1}` | `X0, Y1, Blur 4, Spread 0, Cosmos #121212 - 15%` | Basic cards, alerts |
+| Semantic   | `{semantic.elevation.level-2}` | `X0, Y2, Blur 8, Spread 0, Cosmos #121212 - 15%` | Sticky elements, headers, footers |
+| Semantic   | `{semantic.elevation.level-3}` | `X0, Y3, Blur 12, Spread 0, Cosmos #121212 - 18%` | Multiple sticky elements, panels floating over content |
+| Semantic   | `{semantic.elevation.level-4}` | `X0, Y8, Blur 20, Spread 0, Cosmos #121212 - 35%` | Modals, sidepanels (always used with overlay background) |
 
-**Elevation structure:** Elevation is made up of 3 properties:
-- **Effects** – Shadow effects that create depth
-- **Surface / Fill** – The background fill of the elevated surface
-- **Border** – Border/stroke around the elevated surface (Figma calls border a stroke)
+**White-labelling note:** Elevation tokens use semantic naming that remains consistent across brands. The shadow colour (Cosmos #121212) and opacity values can be adjusted per brand through the token system without breaking the semantic meaning or component functionality. This allows different brands to maintain their visual identity while preserving the elevation hierarchy structure.
 
-**White-labelling note:** Elevation tokens support white-labelling by allowing brand-specific shadow, fill, and border adjustments while maintaining consistent depth hierarchy across levels. The elevation system ensures visual consistency across light and dark themes.
+## 3. Usage Guidelines
 
-### 3. Usage Guidelines
+### Elevation Levels
 
-- **✅ Do:**
-  - Use level 0 as your default canvas layer
-  - Apply higher levels for overlays, sticky content, or layered hierarchies
-  - Use static only to break visual rhythm, not for stacking
-  - Always apply elevation using tokens — never custom shadows — to ensure visual consistency across light and dark themes
-  - Pair elevation with other cues like colour and border for accessibility
+#### Canvas Level 0
+This is the default canvas level to build screens on (Body). All content is laid on this base level.
 
-- **❌ Don't:**
-  - Stack too many elevation levels — it creates clutter
-  - Use elevation alone to suggest interactivity
-  - Mix static and inverse styling without a clear purpose
-  - Create custom shadows instead of using elevation tokens
+#### Level 1
+This level is used to provide hierarchy within content that is laid on level 0, i.e. basic cards, alerts.
 
-### 4. Elevation Levels
+**Examples:**
+- Alert components
+- Basic card elements
+- Content containers that need subtle separation
 
-| Level | Usage | Description |
-|-------|-------|-------------|
-| Level 0 (Canvas) | Default | This is the default canvas level to build screens on |
-| Level 1 | Content hierarchy | This level is used to provide hierarchy within content that is laid on level 0 |
-| Level 2 | Sticky elements | This level is used for any sticky elements on the page such as a header or a footer |
-| Level 3 | Multiple sticky elements | This level is used if there are more than one sticky elements on the page and you want to establish hierarchy between them |
-| Level 4 | Overlays | This level is always used with an overlay background for elements such as modals or drawers |
-| Inverse | Theme-aware | This level is dark in light mode and light in dark mode |
-| Static | Visual prominence | This is agnostic of layer system and used to bring visual prominence and to break out the layout, the colour of the surface does not change between dark and light mode |
+#### Level 2
+This level is used for any sticky elements on the page such as a header or a footer, also can be used for extra lift on cards elements. Content can then slide underneath the sticky elements.
 
-**Note:** Our elevation system includes six depth levels (0-4, plus special surfaces like Inverse and Static). These are layered consistently across the UI to establish meaning and support layout clarity.
+**Examples:**
+- Sticky navigation bars
+- Sticky headers and footers
+- Card elements requiring extra lift
+- Discovery navigation with sticky category selector
 
-### 5. Responsive Behaviour
+#### Level 3
+This level is used if there are more than one sticky elements on the page and you want to establish hierarchy between them. Also for panels floating over content.
 
-Elevation levels remain consistent across breakpoints. The visual appearance of elevation (shadows, fills, borders) adapts to light and dark themes automatically through tokens.
+**Examples:**
+- Multiple sticky elements requiring hierarchy
+- Floating panels
+- Toolbars
+- Seat selection tooltips
+- Map zoom controls
 
-### 6. Accessibility (A11y)
+#### Level 4
+This level is always used with an overlay background for elements such as modals or sidepanels.
 
-- Always pair elevation with other cues like colour and border
-- Shadows alone are not enough for users who rely on high-contrast or assistive technologies
-- Ensure sufficient contrast between elevated surfaces and their backgrounds
-- Use elevation tokens that are designed to work with high-contrast modes
-- Do not rely solely on shadow effects to indicate interactivity or hierarchy
+**Examples:**
+- Modal dialogs
+- Side panels
+- Overlay menus
+- Full-screen overlays
 
-### 7. Update Me
+### ✅ Do:
 
-**⚠️ Token Values:** The token names and values in section 2 (Design Tokens) are placeholders extracted from the Figma file. These should be replaced with the actual token names and values from your design token system before finalising this document. Please verify:
-- Elevation effect token names are correct (e.g., `elevation.elevation-level-1` format)
-- Fill token names match your system (e.g., `fill.elevation-level-1`)
-- Border/stroke token names are accurate (e.g., `border.elevation-level-1`)
-- All token values (shadow effects, fill colours, border styles) are properly documented
-- Token mappings work correctly in both light and dark themes
+- Use elevation to establish clear visual hierarchy
+- Stick to a limited set of elevation levels to reduce visual noise
+- Use the appropriate elevation level for the component's purpose
+- Ensure elevation levels are consistent across similar components
+- Use Level 4 with an overlay background for modals and sidepanels
+- Use Level 2 for sticky elements that need to appear above scrollable content
+- Use Level 1 for basic cards and alerts that need subtle separation
 
-### 8. Versioning & Change Log
+### ❌ Don't:
+
+- Don't change the shadow colours
+- Don't change the shadow depth
+- Only use one shadow at one time
+- Don't modify the default elevation of components
+- Don't create custom elevation levels outside the defined system
+- Don't use multiple elevation levels on a single element
+- Don't use elevation levels inconsistently across similar components
+
+## 4. Responsive Behaviour
+
+Elevation levels remain consistent across all breakpoints. The visual appearance of shadows may need slight adjustments for different screen sizes to maintain visual clarity, but the elevation hierarchy should remain the same.
+
+| Breakpoint | Behaviour / rule | Example |
+|-----------|------------------|---------|
+| Small     | Elevation levels maintain same hierarchy | Level 1 cards, Level 2 sticky nav |
+| Medium    | Elevation levels maintain same hierarchy | Level 1 cards, Level 2 sticky nav |
+| Large     | Elevation levels maintain same hierarchy | Level 1 cards, Level 2 sticky nav |
+
+## 5. Accessibility (A11y)
+
+- **Visual hierarchy:** Elevation helps users understand the structure and layering of the interface, supporting cognitive accessibility
+- **Contrast:** Ensure sufficient contrast between elevated elements and their backgrounds to meet WCAG 2.1/2.2 AA standards
+- **Motion sensitivity:** For users with motion sensitivity, consider reducing or removing elevation animations where possible
+- **Focus indicators:** Elevated interactive elements must have clear focus indicators that are not solely dependent on elevation
+- **Screen readers:** Elevation is a visual treatment; ensure semantic HTML and ARIA attributes convey the hierarchy and relationships between elements
+- **Keyboard navigation:** Elevated elements (especially modals and overlays) must be keyboard accessible and trap focus appropriately
+
+## 6. Versioning & Change Log
 
 | Version | Date       | Change                              | Impact |
 |---------|------------|--------------------------------------|--------|
-| 1.0     | 01/01/2025 | Initial guidelines extracted to MD. | ✅ Baseline |
+| 2.0     | 2025-06-20 | Elevation 2.0 guidelines extracted from Figma. Replaces legacy "Shadows" system. | ✅ Current version |
+| 1.0     | Legacy     | Initial shadows system (deprecated) | ⚠️ Deprecated |
+
+**Note:** Legacy/deprecated version: Shadows. The current elevation system (v2.0) replaces the previous shadows-based approach with a more comprehensive elevation system that includes shadows, surface fill colour, and potentially border colour.
+
+---
+
+**Status:** 🟢 Complete and in-sync with code  
+**Last updated:** 20th June, 2025
 
