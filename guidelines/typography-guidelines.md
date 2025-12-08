@@ -199,6 +199,6 @@ Line length is essential to user experience. It is the distance of a text from l
 
 | Version | Date       | Change                              | Impact |
 |---------|------------|--------------------------------------|--------|
-| 1.1     | 2025-01-15 | Removed design tokens section. Design tokens will be added in a later update. | ✅ Current version |
+| 1.1     | 2025-01-15 | Removed design-system value tables; to be re-added later. | ✅ Current version |
 | 1.0     | 01/01/2025 | Initial guidelines extracted to MD. | ⚠️ Deprecated |
 

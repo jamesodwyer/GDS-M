@@ -121,7 +121,7 @@ Elevation levels remain consistent across all breakpoints. The visual appearance
 
 | Version | Date       | Change                              | Impact |
 |---------|------------|--------------------------------------|--------|
-| 2.1     | 2025-01-15 | Removed design tokens section. Design tokens will be added in a later update. | ✅ Current version |
+| 2.1     | 2025-01-15 | Removed design-system value tables; to be re-added later. | ✅ Current version |
 | 2.0     | 2025-06-20 | Elevation 2.0 guidelines extracted from Figma. Replaces legacy "Shadows" system. | ⚠️ Deprecated |
 | 1.0     | Legacy     | Initial shadows system (deprecated) | ⚠️ Deprecated |
 

@@ -15,23 +15,9 @@
 
 - **Accessibility note:** TODO: Add accessibility guidance related to grid and layout from Figma file.
 
-### 2. Design Tokens
+### 2. Grid System
 
-- **Token architecture reminder:**
-  - Core → Brand → Semantic → Component
-
-- **Token table:**
-
-| Token layer | Example token name | Example value / mapping | Role / notes |
-|------------|--------------------|--------------------------|-------------|
-| Core       | TODO | TODO | Base raw value |
-| Brand      | TODO | ↦ Core token | Brand mapping |
-| Semantic   | `{semantic.breakpoint.sm}` | `"512px"` | Small breakpoint |
-| Semantic   | `{semantic.breakpoint.md}` | `"1024px"` | Medium breakpoint |
-| Semantic   | `{semantic.breakpoint.lg}` | `"1680px"` | Large breakpoint |
-| Component  | TODO | ↦ Semantic token | Applied in UI |
-
-**White-labelling note:** Grid tokens support white-labelling by allowing brand-specific margin and gutter adjustments while maintaining consistent column structures across breakpoints.
+The grid system provides a structured column-based layout designed for consistency and scalability across breakpoints. It covers column counts, margin widths, and gutter widths for each breakpoint, enabling predictable layouts for both design and development.
 
 ### 3. Usage Guidelines
 
@@ -79,6 +65,6 @@
 
 | Version | Date       | Change                              | Impact |
 |---------|------------|--------------------------------------|--------|
-| 1.1     | 2025-01-15 | Removed design tokens section. Design tokens will be added in a later update. | ✅ Current version |
+| 1.1     | 2025-01-15 | Removed design-system value tables; to be re-added later. | ✅ Current version |
 | 1.0     | 01/01/2025 | Initial guidelines extracted to MD. | ⚠️ Deprecated |
 

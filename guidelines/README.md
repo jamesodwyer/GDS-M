@@ -328,6 +328,6 @@ Before documenting the system, verify:
 ---
 
 **Last Updated:** 2025-01-15  
-**Status:** All foundations complete. Design tokens removed from all guidelines - will be added in a later update.
+**Status:** All foundations complete. Design-system value tables removed for now; will be added in a later update.
 
 

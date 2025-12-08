@@ -32,13 +32,13 @@ TODO: Add responsive colour behaviour if applicable.
 
 - TODO: Add WCAG 2.1/2.2 AA colour contrast rules.
 - TODO: Add focus, outline, and high-contrast palette guidance.
-- TODO: Add tokens specifically used for accessibility.
+- TODO: Add system values specifically used for accessibility.
 
 ### 6. Versioning & Change Log
 
 | Version | Date       | Change                              | Impact |
 |---------|------------|--------------------------------------|--------|
-| 1.1     | 2025-01-15 | Removed design tokens sections. Design tokens will be added in a later update. | ✅ Current version |
+| 1.1     | 2025-01-15 | Removed design-system value sections; to be re-added later. | ✅ Current version |
 | 1.0     | 01/01/2025 | Initial guidelines extracted to MD. | ⚠️ Deprecated |
 
 ---
@@ -80,13 +80,13 @@ TODO: Add description of the typography system structure and organisation.
 - TODO: Add WCAG 2.1/2.2 AA readable text size requirements.
 - TODO: Add line height and spacing guidance.
 - TODO: Add motion and animation guidance for typography.
-- TODO: Add tokens specifically used for accessibility.
+- TODO: Add system values specifically used for accessibility.
 
 ### 6. Versioning & Change Log
 
 | Version | Date       | Change                              | Impact |
 |---------|------------|--------------------------------------|--------|
-| 1.1     | 2025-01-15 | Removed design tokens sections. Design tokens will be added in a later update. | ✅ Current version |
+| 1.1     | 2025-01-15 | Removed design-system value sections; to be re-added later. | ✅ Current version |
 | 1.0     | 01/01/2025 | Initial guidelines extracted to MD. | ⚠️ Deprecated |
 
 ---
@@ -127,13 +127,13 @@ TODO: Add description of the spacing system structure and organisation.
 
 - TODO: Add minimum tap target size requirements (WCAG 2.1/2.2 AA).
 - TODO: Add spacing guidance for focus indicators.
-- TODO: Add tokens specifically used for accessibility.
+- TODO: Add system values specifically used for accessibility.
 
 ### 6. Versioning & Change Log
 
 | Version | Date       | Change                              | Impact |
 |---------|------------|--------------------------------------|--------|
-| 1.1     | 2025-01-15 | Removed design tokens sections. Design tokens will be added in a later update. | ✅ Current version |
+| 1.1     | 2025-01-15 | Removed design-system value sections; to be re-added later. | ✅ Current version |
 | 1.0     | 01/01/2025 | Initial guidelines extracted to MD. | ⚠️ Deprecated |
 
 ---
@@ -197,14 +197,14 @@ The grid system provides a structured column-based layout designed for consisten
 
 ### 5. Accessibility (A11y)
 
-- TODO: Add explicit accessibility contrast rules for Grid tokens.
+- TODO: Add explicit accessibility contrast rules for Grid system.
 - TODO: Add focus, outline, and layout accessibility guidance.
 
 ### 6. Versioning & Change Log
 
 | Version | Date       | Change                              | Impact |
 |---------|------------|--------------------------------------|--------|
-| 1.1     | 2025-01-15 | Removed design tokens sections. Design tokens will be added in a later update. | ✅ Current version |
+| 1.1     | 2025-01-15 | Removed design-system value sections; to be re-added later. | ✅ Current version |
 | 1.0     | 01/01/2025 | Initial guidelines extracted to MD. | ⚠️ Deprecated |
 
 ---
@@ -239,14 +239,14 @@ TODO: Add responsive elevation behaviour if applicable.
 
 ### 5. Accessibility (A11y)
 
-- TODO: Add explicit accessibility contrast rules for Elevation tokens.
+- TODO: Add explicit accessibility contrast rules for Elevation system.
 - TODO: Add focus, outline, and visual hierarchy guidance.
-- TODO: Add tokens specifically used for accessibility.
+- TODO: Add system values specifically used for accessibility.
 
 ### 6. Versioning & Change Log
 
 | Version | Date       | Change                              | Impact |
 |---------|------------|--------------------------------------|--------|
-| 1.1     | 2025-01-15 | Removed design tokens sections. Design tokens will be added in a later update. | ✅ Current version |
+| 1.1     | 2025-01-15 | Removed design-system value sections; to be re-added later. | ✅ Current version |
 | 1.0     | 01/01/2025 | Initial guidelines extracted to MD. | ⚠️ Deprecated |
 
